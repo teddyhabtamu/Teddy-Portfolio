@@ -1,12 +1,12 @@
 function About() {
   return (
-    <section class="about" id="about">
-      <div class="about-img">
+    <section className="about" id="about">
+      <div className="about-img">
         <img src="images/home1.png" alt="" />
       </div>
 
-      <div class="about-content">
-        <h2 class="heading">
+      <div className="about-content">
+        <h2 className="heading">
           About <span>Me</span>
         </h2>
         <h3>Frontend Developer!</h3>

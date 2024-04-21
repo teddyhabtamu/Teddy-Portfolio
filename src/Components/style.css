@@ -51,7 +51,7 @@ body {
   font-size: 4rem;
   color: #fbfde3;
   font-weight: 600;
-  cursor: default;
+  cursor: pointer;
 
 }
 
@@ -76,6 +76,8 @@ body {
   font-size: 3rem;
   color: var(--text-color);
   display: none;
+  width: 40px;
+  cursor: pointer;
 }
 
 .home {
@@ -87,7 +89,7 @@ body {
 
 .home-img img {
   width: 30vw;
-  animation: floatImage 2s ease-in-out infinite alternate;
+  animation: floatImage 3s ease-in-out infinite alternate;
   margin-left: 2rem;
 }
 
@@ -108,6 +110,7 @@ body {
 .home-content h3 {
   font-size: 3rem;
   font-weight: 700;
+  margin: 4rem 0;
 
 }
 
@@ -176,6 +179,11 @@ span {
   justify-content: center;
   gap: 2rem;
   background: var(--second-bg-color);
+}
+
+.about-img{
+  display: flex;
+  width: 100vh;
 }
 
 .about-img img {
@@ -287,10 +295,10 @@ span {
   height: 40px;
   border-radius: 10px;
   background-color: white;
-  padding: 10px;
+  padding: 14px;
 }
 .icon-externalLink{
-  width: 5px;
+  width: 2px;
   cursor: pointer;
 }
 
@@ -313,6 +321,12 @@ span {
 
 .portfolio-box:hover .portfolio-layer {
   transform: translateY(0);
+}
+
+.portfolio-img{
+  height: 60%;
+  width: auto;
+  padding: 20px;
 }
 
 .portfolio-layer h4 {
@@ -340,6 +354,13 @@ span {
   color: var(--second-bg-color);
 }
 
+.contact{
+  height: calc(100vh - 400px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .contact h2 {
   margin-bottom: 3rem;
 }
@@ -450,6 +471,7 @@ span {
     display: block;
 
   }
+  
 
   .navbar {
     position: absolute;
@@ -463,7 +485,7 @@ span {
     display: none;
   }
 
-  .navbar.active {
+  .navbar.open {
     display: block;
   }
 
@@ -474,7 +496,7 @@ span {
   }
 
   .home {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .home-content h3 {
@@ -486,17 +508,23 @@ span {
   }
 
   .home-img img {
-    width: 60vh;
+    width: 30vh;
     margin-top: 4rem;
+    margin-bottom: 4rem;
+    border-radius: 50%;
   }
 
   .about {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .about-img {
-    width: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     margin-top: 4rem;
+
   }
 
   .service h2 {
@@ -511,10 +539,6 @@ span {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .contact {
-    min-height: auto;
-
-  }
 }
 
 @media(max-width: 617px) {

@@ -9,17 +9,15 @@ import "./style.css"
 function Main(){
 
   return(
-    <html>
-      <body>
-        <Header />
-        <Home />
-        <About />
-        <Services />
-        <Portfolio />
-        <Contact />
-        <Footer />
-      </body>
-    </html>
+    <div>
+      <Header />
+      <Home />
+      <About />
+      <Services />
+      <Portfolio />
+      <Contact />
+      <Footer />
+    </div>
   )
 }
 

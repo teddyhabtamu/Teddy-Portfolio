@@ -1,47 +1,51 @@
 function Services() {
   return (
-    <section class="services" id="services">
-      <h2 class="heading">
+    <section className="services" id="services">
+      <h2 className="heading">
         Our <span>Services</span>
       </h2>
-      <div class="services-container">
-        <div class="services-box">
-          <i class="fa-solid fa-code"></i>
-          <h3>Wev Development</h3>
+      <div className="services-container">
+        <div className="services-box">
+          <i className="fa-solid fa-code"></i>
+          <h3>Web Design</h3>
           <p>
-            My journey into the world of frontend development began with a
-            fascination for creating visually appealing websites. Over the
-            years, I've honed my skills and ventured into the realm of dynamic
-            web applications, always eager to take on new challenges.
+            Our web design service focuses on creating visually appealing and
+            user-friendly websites tailored to your brand's identity and target
+            audience. From concept to execution, we prioritize clean layouts,
+            intuitive navigation, and responsive design to ensure an engaging
+            user experience across all devices.
           </p>
-          <a href="" class="btn">
+          <a href="" className="btn">
             Read More
           </a>
         </div>
-        <div class="services-box">
-          <i class="fa-solid fa-database"></i>
-          <h3>Data Structure and Algorithim</h3>
+        <div className="services-box">
+          <i className="fa-solid fa-database"></i>
+          <h3>Web development</h3>
           <p>
-            My journey into the world of frontend development began with a
-            fascination for creating visually appealing websites. Over the
-            years, I've honed my skills and ventured into the realm of dynamic
-            web applications, always eager to take on new challenges.
+            With our web development expertise, we bring your digital vision to
+            life, crafting custom solutions that meet your specific requirements
+            and business goals. Utilizing the latest technologies and best
+            practices, we deliver robust, scalable, and secure web applications
+            that drive results and adapt to your evolving needs.
           </p>
-          <a href="" class="btn">
+          <a href="" className="btn">
             Read More
           </a>
         </div>
 
-        <div class="services-box">
-          <i class="fa-brands fa-python"></i>
-          <h3>Advanced Python</h3>
+        <div className="services-box">
+          <i className="fa-brands fa-python"></i>
+          <h3>AI Topics</h3>
           <p>
-            My journey into the world of frontend development began with a
-            fascination for creating visually appealing websites. Over the
-            years, I've honed my skills and ventured into the realm of dynamic
-            web applications, always eager to take on new challenges.
+            Explore the exciting world of artificial intelligence with our AI
+            topics service, where we delve into cutting-edge advancements and
+            practical applications of machine learning, natural language
+            processing, and computer vision. From introductory overviews to
+            in-depth discussions, we offer insights and resources to help you
+            harness the power of AI for innovation and growth.
           </p>
-          <a href="" class="btn">
+          <a href="" className="btn">
             Read More
           </a>
         </div>
