@@ -1,4 +1,43 @@
 function Portfolio() {
+  const projects = [
+    {
+      id: 1,
+      title: "Meme Generator Web-App",
+      image: "images/memeGenerator.png",
+      link: "https://github.com/teddyhabtamu/Meme-Generator-Web-App",
+    },
+    {
+      id: 2,
+      title: "Tic Tac Toe Web Game",
+      image: "images/Tic-Tac-Toe.png",
+      link: "https://github.com/teddyhabtamu/Prodigy_WD_03",
+    },
+    {
+      id: 3,
+      title: "To-Do Web App",
+      image: "images/To-doList.png",
+      link: "https://www.google.com",
+    },
+    {
+      id: 4,
+      title: "Digital Clock Web App",
+      image: "images/DigitalClock.png",
+      link: "https://github.com/teddyhabtamu/Digital-Clock-Using-React",
+    },
+    {
+      id: 5,
+      title: "Airbnb Website Clone",
+      image: "images/airbnb.png",
+      link: "https://github.com/teddyhabtamu/AirBnb-Website-Clone",
+    },
+    {
+      id: 6,
+      title: "Stopwatch Web App",
+      image: "images/Stopwatch.png",
+      link: "https://github.com/teddyhabtamu/Prodigy_WD_02",
+    },
+  ];
+
   return (
     <section className="portfolio" id="portfolio">
       <h2 className="heading">
@@ -6,126 +45,28 @@ function Portfolio() {
       </h2>
 
       <div className="portfolio-container">
-        <div className="portfolio-box">
-          <div className="portfolio-img">
-            <img src="images/portfolio1.jpg" alt="" />
-            <div className="portfolio-layer">
-              <h4>Meme Generator Web-App</h4>
-              <img src="images/memeGenerator.png" alt="Project 1" className="portfolio-img" />
-              <a
-                href="https://github.com/teddyhabtamu/Meme-Generator-Web-App"
-                target="_blank"
-                className="externalLink-container"
-              >
-                <img
-                  className="icon-externalLink"
-                  src="icons/external-link.png"
-                  alt=""
-                />
-              </a>
+        {projects.map((project) => (
+          <div className="portfolio-box" key={project.id}>
+            <div className="portfolio-img">
+              <img src={project.image} alt={project.title} />
+              <div className="portfolio-layer">
+                <h4>{project.title}</h4>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="externalLink-container"
+                >
+                  <img
+                    className="icon-externalLink"
+                    src="icons/external-link.png"
+                    alt="External Link"
+                  />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="portfolio-box">
-          <div className="portfolio-img">
-            <img src="images/portfolio2.jpg" alt="" />
-            <div className="portfolio-layer">
-              <h4>Tic Tac Toe Web game</h4>
-              <img src="images/Tic-Tac-Toe.png" alt="" className="portfolio-img" />
-              <a
-                href="https://github.com/teddyhabtamu/Prodigy_WD_03"
-                className="externalLink-container"
-              >
-                <img
-                  className="icon-externalLink"
-                  src="icons/external-link.png"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="portfolio-box">
-          <div className="portfolio-img">
-            <img src="images/portfolio3.jpg" alt="" />
-            <div className="portfolio-layer">
-              <h4>To-Do Web App</h4>
-              <img src="images/To-doList.png" alt="" className="portfolio-img" />
-              <a
-                href="https://www.google.com"
-                className="externalLink-container"
-              >
-                <img
-                  className="icon-externalLink"
-                  src="icons/external-link.png"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="portfolio-box">
-          <div className="portfolio-img">
-            <img src="images/portfolio4.jpg" alt="" />
-            <div className="portfolio-layer">
-              <h4>Digital Clock Web app</h4>
-              <img src="images/DigitalClock.png" alt="" className="portfolio-img" />
-              <a
-                href="https://github.com/teddyhabtamu/Digital-Clock-Using-React"
-                className="externalLink-container"
-              >
-                <img
-                  className="icon-externalLink"
-                  src="icons/external-link.png"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="portfolio-box">
-          <div className="portfolio-img">
-            <img src="images/portfolio5.jpg" alt="" />
-            <div className="portfolio-layer">
-              <h4>Airbnb Website Clone</h4>
-              <img className="portfolio-img" src="images/airbnb.png" alt="project-1" />
-              <a
-                href="https://github.com/teddyhabtamu/AirBnb-Website-Clone"
-                className="externalLink-container"
-              >
-                <img
-                  className="icon-externalLink"
-                  src="icons/external-link.png"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="portfolio-box">
-          <div className="portfolio-img">
-            <img src="images/portfolio6.jpg" alt="" />
-            <div className="portfolio-layer">
-              <h4>Stopwatch Web app</h4>
-              <img src="images/Stopwatch.png" alt="" className="portfolio-img" />
-              <a
-                href="https://github.com/teddyhabtamu/Prodigy_WD_02"
-                className="externalLink-container"
-              >
-                <img
-                  className="icon-externalLink"
-                  src="icons/external-link.png"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

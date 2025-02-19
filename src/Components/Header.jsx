@@ -3,8 +3,7 @@ import React, { useState, useEffect } from "react";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activePage, setActivePage] = useState("home");
-
-
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -18,9 +17,7 @@ function Header() {
       },
       { threshold: 0.7 }
     );
-    console.log("check");
 
-    // Add a delay before starting to observe the elements
     setTimeout(() => {
       const homeElement = document.getElementById("home");
       const aboutElement = document.getElementById("about");
@@ -33,7 +30,7 @@ function Header() {
       if (servicesElement) observer.observe(servicesElement);
       if (portfolioElement) observer.observe(portfolioElement);
       if (contactElement) observer.observe(contactElement);
-    }, 1); // Adjust the delay as needed
+    }, 1);
 
     return () => {
       observer.disconnect();
@@ -47,6 +44,11 @@ function Header() {
   const handlePageChange = (page) => {
     setActivePage(page);
     setIsMenuOpen(false);
+  };
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle("light-mode", !isDarkMode);
   };
 
   return (
@@ -82,6 +84,9 @@ function Header() {
         <a href="#contact" className={activePage === "contact" ? "active" : ""}>
           Contact
         </a>
+        <button className="dark-mode-toggle" onClick={toggleDarkMode}>
+          {isDarkMode ? "☀️" : "🌙"}
+        </button>
       </nav>
     </header>
   );
