@@ -14,21 +14,37 @@ function Home() {
           technology.
         </p>
         <div className="social-media">
-          <a href="https://github.com/teddyhabtamu" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/teddyhabtamu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="icons/github.png" alt="github-icon" />
           </a>
-          <a href="https://twitter.com/TewodrosHa2669" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://twitter.com/TewodrosHa2669"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="icons/twitter.png" alt="twitter-icon" />
           </a>
-          <a href="https://leetcode.com/teddy321/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://leetcode.com/teddy321/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="icons/leetcode.png" alt="leetCode-icon" />
           </a>
-          <a href="https://www.linkedin.com/in/tewodroshabtamu/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.linkedin.com/in/tewodroshabtamu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="icons/linkedin.png" alt="linkedin-icon" />
           </a>
         </div>
         <a
-          href="https://drive.google.com/uc?export=download&id=1gEL5lhnlw9Yd7Nel_8hwsv8nuIcZ-DHK"
+          href="https://drive.google.com/uc?id=13EYho__j8ljvLWPgd3F2A4KqeRsGM0Z_&export=download"
           target="_blank"
           rel="noopener noreferrer"
           className="btn"
