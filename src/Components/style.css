@@ -354,6 +354,7 @@ span {
 
 .portfolio-layer h4 {
   font-size: 3rem;
+  color: #ffffff;
 }
 
 .portfolio-layer p {
@@ -374,7 +375,7 @@ span {
 
 .portfolio-layer a i {
   font-size: 1.7rem;
-  color: var(--second-bg-color);
+  color: #e2e2e2;
 }
 
 .contact{
