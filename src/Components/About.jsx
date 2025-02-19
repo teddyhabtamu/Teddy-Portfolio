@@ -2,7 +2,8 @@ function About() {
   return (
     <section className="about" id="about">
       <div className="about-img">
-        <img src="images/home1.png" alt="" />
+        <img src="images/home1.png" alt="Profile" />
+        <img src="images/arrow.png" alt="Arrow" className="curve-arrow" />
       </div>
 
       <div className="about-content">

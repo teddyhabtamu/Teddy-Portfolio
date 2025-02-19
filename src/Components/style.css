@@ -114,6 +114,13 @@ body {
   width: 30vw;
   animation: floatImage 3s ease-in-out infinite alternate;
   margin-left: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.home-img img:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 @keyframes floatImage {
@@ -204,13 +211,15 @@ span {
   background: var(--second-bg-color);
 }
 
-.about-img{
+.about-img {
   display: flex;
   width: 100vh;
+  padding: 20px;
+  margin-right: 20px;
 }
 
 .about-img img {
-  width: 30vw
+  width: 30vw;
 }
 
 .heading {
@@ -237,6 +246,40 @@ span {
 
 .about-content span {
   font-weight: 700;
+}
+
+.curve-arrow {
+  position: absolute;
+  bottom: -450px;
+  right: 950px;
+  width: 400px !important;
+  transform: rotate(-20deg);
+  /* animation: bounce 1.5s infinite alternate ease-in-out; */
+}
+
+/* Default: Hide the arrow */
+.curve-arrow {
+  display: none;
+}
+
+/* Show arrow only on Desktop (width > 1024px) */
+@media screen and (min-width: 1024px) {
+  .curve-arrow {
+    display: block;
+  }
+}
+
+/* Show arrow only on Mobile (width < 600px) */
+@media screen and (max-width: 600px) {
+  .curve-arrow {
+    display: block;
+    width: 150px !important;
+    transform: scaleX(-1) rotate(20deg);
+    /* Adjust size for mobile */
+    bottom: -340px;
+    /* Adjust position for smaller screens */
+    right: 230px;
+  }
 }
 
 .services h2 {
