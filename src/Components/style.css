@@ -416,12 +416,14 @@ span {
 .contact form .input-box input {
   width: 49%;
   border: solid;
+  border-width: 1px;
 
 }
 
 .contact form textarea {
   resize: none;
   border: solid;
+  border-width: 1px;
 }
 
 .contact form .btn {
