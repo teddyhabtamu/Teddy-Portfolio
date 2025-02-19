@@ -3,39 +3,13 @@ import React, { useState, useEffect } from "react";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activePage, setActivePage] = useState("home");
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(
+    localStorage.getItem("theme") === "dark"
+  );
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActivePage(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.7 }
-    );
-
-    setTimeout(() => {
-      const homeElement = document.getElementById("home");
-      const aboutElement = document.getElementById("about");
-      const servicesElement = document.getElementById("services");
-      const portfolioElement = document.getElementById("portfolio");
-      const contactElement = document.getElementById("contact");
-
-      if (homeElement) observer.observe(homeElement);
-      if (aboutElement) observer.observe(aboutElement);
-      if (servicesElement) observer.observe(servicesElement);
-      if (portfolioElement) observer.observe(portfolioElement);
-      if (contactElement) observer.observe(contactElement);
-    }, 1);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+    document.body.classList.toggle("light-mode", !isDarkMode);
+  }, [isDarkMode]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -47,8 +21,11 @@ function Header() {
   };
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle("light-mode", !isDarkMode);
+    setIsDarkMode((prevMode) => {
+      const newMode = !prevMode;
+      localStorage.setItem("theme", newMode ? "dark" : "light");
+      return newMode;
+    });
   };
 
   return (
