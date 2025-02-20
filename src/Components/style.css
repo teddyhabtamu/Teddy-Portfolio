@@ -87,6 +87,7 @@ body {
   color: var(--text-color);
   margin-left: 4rem;
   transition: .3s;
+  margin-right: 4rem;
 
 }
 
@@ -411,7 +412,7 @@ span {
   align-items: center;
   width: 5rem;
   height: 5rem;
-  background: var(--text-color);
+  background: #fff;
   border-radius: 50%;
 
 }

@@ -2,39 +2,39 @@ function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: "Meme Generator Web-App",
-      image: "images/memeGenerator.png",
-      link: "https://github.com/teddyhabtamu/Meme-Generator-Web-App",
+      title: "Brainwave AI Chatting",
+      image: "images/brainwave.png",
+      link: "https://brainwave-six-gamma.vercel.app/",
     },
     {
       id: 2,
-      title: "Tic Tac Toe Web Game",
-      image: "images/Tic-Tac-Toe.png",
-      link: "https://github.com/teddyhabtamu/Prodigy_WD_03",
+      title: "Nike Branding",
+      image: "images/nike.png",
+      link: "https://nike-shoes-steel.vercel.app/",
     },
     {
       id: 3,
-      title: "To-Do Web App",
-      image: "images/To-doList.png",
-      link: "https://www.google.com",
+      title: "Fana Digital Library",
+      image: "images/fana.png",
+      link: "https://github.com/teddyhabtamu/Fana-Digital-Library",
     },
     {
       id: 4,
-      title: "Digital Clock Web App",
-      image: "images/DigitalClock.png",
-      link: "https://github.com/teddyhabtamu/Digital-Clock-Using-React",
+      title: "PeakPulse Fitness Tracker",
+      image: "images/peakpulse.png",
+      link: "https://github.com/teddyhabtamu/PeakPulse-Fitness-Tracker-",
     },
     {
       id: 5,
-      title: "Airbnb Website Clone",
-      image: "images/airbnb.png",
-      link: "https://github.com/teddyhabtamu/AirBnb-Website-Clone",
+      title: "Meme Generator",
+      image: "images/meme.png",
+      link: "https://meme-generator-web-app-phi.vercel.app/",
     },
     {
       id: 6,
-      title: "Stopwatch Web App",
-      image: "images/Stopwatch.png",
-      link: "https://github.com/teddyhabtamu/Prodigy_WD_02",
+      title: "Working Day Organizer",
+      image: "images/todo.png",
+      link: "https://github.com/teddyhabtamu/To-do-List-Web-Application",
     },
   ];
 
@@ -47,24 +47,26 @@ function Portfolio() {
       <div className="portfolio-container">
         {projects.map((project) => (
           <div className="portfolio-box" key={project.id}>
-            <div className="portfolio-img">
-              <img src={project.image} alt={project.title} />
-              <div className="portfolio-layer">
-                <h4>{project.title}</h4>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="externalLink-container"
-                >
-                  <img
-                    className="icon-externalLink"
-                    src="icons/external-link.png"
-                    alt="External Link"
-                  />
-                </a>
+            <a href={project.link}>
+              <div className="portfolio-img">
+                <img src={project.image} alt={project.title} />
+                <div className="portfolio-layer">
+                  <h4>{project.title}</h4>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="externalLink-container"
+                  >
+                    <img
+                      className="icon-externalLink"
+                      src="icons/external-link.png"
+                      alt="External Link"
+                    />
+                  </a>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         ))}
       </div>

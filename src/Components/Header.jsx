@@ -35,30 +35,44 @@ function Header() {
       </a>
       <img
         id="menu-icon"
-        src="icons/menu.png"
+        src={isMenuOpen ? "icons/close.png" : "icons/menu.png"}
         alt="menu-icon"
         onClick={toggleMenu}
       />
       <nav className={`navbar ${isMenuOpen ? "open" : ""}`}>
-        <a href="#home" className={activePage === "home" ? "active" : ""}>
+        <a
+          href="#home"
+          className={activePage === "home" ? "active" : ""}
+          onClick={() => handlePageChange("home")}
+        >
           Home
         </a>
-        <a href="#about" className={activePage === "about" ? "active" : ""}>
+        <a
+          href="#about"
+          className={activePage === "about" ? "active" : ""}
+          onClick={() => handlePageChange("about")}
+        >
           About
         </a>
         <a
           href="#services"
           className={activePage === "services" ? "active" : ""}
+          onClick={() => handlePageChange("services")}
         >
           Services
         </a>
         <a
           href="#portfolio"
           className={activePage === "portfolio" ? "active" : ""}
+          onClick={() => handlePageChange("portfolio")}
         >
           Portfolio
         </a>
-        <a href="#contact" className={activePage === "contact" ? "active" : ""}>
+        <a
+          href="#contact"
+          className={activePage === "contact" ? "active" : ""}
+          onClick={() => handlePageChange("contact")}
+        >
           Contact
         </a>
         <button className="dark-mode-toggle" onClick={toggleDarkMode}>

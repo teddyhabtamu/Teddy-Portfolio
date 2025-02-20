@@ -15,6 +15,13 @@ function Home() {
         </p>
         <div className="social-media">
           <a
+            href="https://www.linkedin.com/in/tewodros-habtamu-831754351/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="icons/linkedin.png" alt="linkedin-icon" />
+          </a>
+          <a
             href="https://github.com/teddyhabtamu"
             target="_blank"
             rel="noopener noreferrer"
@@ -34,13 +41,6 @@ function Home() {
             rel="noopener noreferrer"
           >
             <img src="icons/leetcode.png" alt="leetCode-icon" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/tewodroshabtamu/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="icons/linkedin.png" alt="linkedin-icon" />
           </a>
         </div>
         <a
