@@ -16,7 +16,7 @@ function Portfolio() {
       id: 3,
       title: "Fana Digital Library",
       image: "images/fana.png",
-      link: "https://github.com/teddyhabtamu/Fana-Digital-Library",
+      link: "https://fana-digital-library-ojng.vercel.app",
     },
     {
       id: 4,
@@ -47,7 +47,7 @@ function Portfolio() {
       <div className="portfolio-container">
         {projects.map((project) => (
           <div className="portfolio-box" key={project.id}>
-            <a href={project.link}>
+            <a href={project.link} target="_blank">
               <div className="portfolio-img">
                 <img src={project.image} alt={project.title} />
                 <div className="portfolio-layer">
