@@ -22,13 +22,13 @@ function Portfolio() {
       id: 4,
       title: "PeakPulse Fitness Tracker",
       image: "images/peakpulse.png",
-      link: "https://github.com/teddyhabtamu/PeakPulse-Fitness-Tracker-",
+      link: "https://peak-pulse-fitness-tracker-kb1c.vercel.app",
     },
     {
       id: 5,
       title: "Meme Generator",
       image: "images/meme.png",
-      link: "https://meme-generator-web-app-phi.vercel.app/",
+      link: "https://meme-generator-web-app-phi.vercel.app",
     },
     {
       id: 6,
